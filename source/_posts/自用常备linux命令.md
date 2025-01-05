@@ -24,6 +24,11 @@ top
 ```
 
 ``` bash
+# 查看文件的生成时间戳
+stat <filename>
+```
+
+``` bash
 # 查看进程
 ps -ef | grep 'work12.sh'
 ```
