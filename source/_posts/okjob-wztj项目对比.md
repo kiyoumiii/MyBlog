@@ -110,7 +110,7 @@ export default {
 
 ```
 
-** Pinia 的功能 **
+Pinia 的功能 
 - 更简洁的 API：Pinia 提供了更简洁和直观的 API，使得状态管理更加简单易用。
 - 组合式 API 支持：Pinia 完全基于 Vue 3 的组合式 API 设计，与 Vue 3 的特性（如 setup 函数）更加契合。
 - 无严格模式：Pinia 不需要严格模式，因为它的设计使得状态更新更加自然和安全。
@@ -137,7 +137,7 @@ export const useCounterStore = defineStore({
 
 ```
 
-** 区别 **
+区别 
 - API 设计：Vuex 的 API 相对复杂，需要定义 state、getters、mutations、actions 等多个部分，而 Pinia 的 API 更为简洁，通过 defineStore 函数来定义状态管理。
 - 与 Vue 的集成：Vuex 主要与 Vue 2 和 Vue 3 的选项式 API 集成，而 Pinia 完全基于 Vue 3 的组合式 API 设计，更适合 Vue 3 的开发方式。
 - 类型支持：Pinia 提供了更好的 TypeScript 支持，能够自动推断类型，而 Vuex 在 TypeScript 支持方面需要更多的类型注解。
@@ -145,7 +145,8 @@ export const useCounterStore = defineStore({
 - 社区和生态：Vuex 是 Vue.js 的官方状态管理库，拥有较大的社区和丰富的生态支持，而 Pinia 是 Vue 3 推荐的状态管理库，逐渐在社区中获得更多的关注和支持。
 
 2. watch 和 watchEffect 是 Vue 3 中用于响应式地观察数据变化的两个 API，它们在使用场景和行为上有一些区别。
-** watch **
+
+- watch 
 watch API 与vue2选项式 API this.$watch (以及相应的 watch 选项) 完全等效。watch
 需要侦听特定的数据源，并在单独的回调函数中执行副作用。默认情况下，它也是惰性的——即回调仅在侦听源发生变化时被调用。
 
@@ -171,7 +172,7 @@ watch([fooRef, barRef], ([foo, bar], [prevFoo, prevBar]) => {
 })
 ```
 
-** watchEffect **
+- watchEffect 
 立即执行传入的一个函数，同时响应式追踪其依赖，并在其依赖变更时重新运行该函数。
 
 ``` javascript
