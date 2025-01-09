@@ -39,6 +39,11 @@ kill <pid>
 ```
 
 ``` bash
+# 杀死用户为<username>的进程
+pkill -u <username>
+```
+
+``` bash
 # 查看CPU核数
 nproc
 ```
