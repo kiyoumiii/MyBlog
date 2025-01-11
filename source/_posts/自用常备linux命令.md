@@ -120,6 +120,9 @@ find . -type f -name '*_minimized.pdb' | wc -l
 rsync -auvhz *_minimized.pdb zhaomiaomiao@XXXLab:/mnt/sto2/zhaomiaomiao/select_trainset_241203/mini4w_reconset/mini_pdbs/recon1_4w_pdb/
 
 rsync -auvhz *.log zhaomiaomiao@XXXLab:/mnt/sto2/zhaomiaomiao/select_trainset_241203/mini4w_reconset/mini_logs/recon1_4w_log/
+
+nohup namd2 +p4 work1.tcl > /dev/null 2>&1 &
+
 ```
 
 另一套命令
@@ -128,4 +131,10 @@ rsync -auvhz *.log zhaomiaomiao@XXXLab:/mnt/sto2/zhaomiaomiao/select_trainset_24
 module load CUDA/11.0.0
 module load VMD/1.9.3
 vmd -dispdev none -e hbb_align2initial.tcl.txt
+```
+
+只需要传输文件（不包括文件夹及其子文件）
+
+``` bash
+rsync -av --progress --exclude='*/' ./ ../task2/
 ```
