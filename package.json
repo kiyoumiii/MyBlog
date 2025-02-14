@@ -29,7 +29,7 @@
     "hexo-server": "^3.0.0",
     "hexo-symbols-count-time": "^0.7.1",
     "hexo-theme-fluid": "^1.9.7",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.1.0"
   },
   "devDependencies": {
     "hexo-feed": "^1.1.2"
